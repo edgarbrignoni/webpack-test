@@ -719,9 +719,15 @@ if (__WEBPACK_IMPORTED_MODULE_2_validator___default.a.isEmail('hello@world.com')
 Object(__WEBPACK_IMPORTED_MODULE_1__index_js__["a" /* createForm */])();
 
 document.querySelector('#btn').addEventListener('click', function () {
-	var email = document.querySelector('#my-input').value;
-	if (__WEBPACK_IMPORTED_MODULE_2_validator___default.a.isEmail(email)) alert('Your email is right');
-	else alert('Please fix your email');
+	let email = document.querySelector('#my-input').value;
+
+	if (__WEBPACK_IMPORTED_MODULE_2_validator___default.a.isEmail(email)) {
+		document.body.style.backgroundColor = "green";
+		alert('Your email is right');
+	} else {
+		document.body.style.backgroundColor = "red";
+		alert('Please fix your email');
+	}
 });
 
 
@@ -765,7 +771,7 @@ exports = module.exports = __webpack_require__(19)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n    background: orange;\n}", ""]);
+exports.push([module.i, "body {\n    background: yellow;\n}", ""]);
 
 // exports
 

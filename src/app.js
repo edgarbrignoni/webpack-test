@@ -8,7 +8,13 @@ if (validator.isEmail('hello@world.com')) console.log('hello@world.com ' + 'Yes 
 createForm();
 
 document.querySelector('#btn').addEventListener('click', function () {
-	var email = document.querySelector('#my-input').value;
-	if (validator.isEmail(email)) alert('Your email is right');
-	else alert('Please fix your email');
+	let email = document.querySelector('#my-input').value;
+
+	if (validator.isEmail(email)) {
+		document.body.style.backgroundColor = "green";
+		alert('Your email is right');
+	} else {
+		document.body.style.backgroundColor = "red";
+		alert('Please fix your email');
+	}
 });
